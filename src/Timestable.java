@@ -10,21 +10,29 @@ public class Timestable {
 		int low;
 		int low2;
 		int dif;
-		int y=1;
+		int counter=0;
+		
 		System.out.println("Please give me your highest number you want to work with.");
 		hi=in.nextInt();
 		System.out.println("Please give me your lowest number you want to work with.");
 		low=in.nextInt();
+		int temp=low;
+		low=hi;
+		hi=temp;
 		low2=low;
 		dif=hi-low;
 		for (int x=low;x<=hi;x++) {
 			System.out.print("\t"+x+"\t");
 		}  	System.out.println();
-		System.out.print(low);
-		for (int x=dif;x<=hi;x++) {
-			System.out.print(" \t"+(low*(low)));
-			
+		for (int x=low;x<=hi;x++) {
+			System.out.println();
+			System.out.print(x);
+			for (int y=low;y<=hi;y++) {
+				System.out.print(" \t"+(x*y)+"\t ");
 		}
-
-	}
+		}
+		
+		
+		} 
+		
 }
